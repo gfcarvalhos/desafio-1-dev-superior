@@ -19,6 +19,6 @@ public class OrderService {
 
 
     public String ToString(Order order){
-        return String.format("Pedido código %s \nValor total: %.2f", order.getCode(), this.total(order));
+        return String.format("Pedido código %s \nValor total: R$ %.2f", order.getCode(), this.total(order));
     }
 }

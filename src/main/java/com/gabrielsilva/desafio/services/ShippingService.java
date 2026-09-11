@@ -16,7 +16,7 @@ public class ShippingService {
         Double valor_basico = order.getBasic();
         if(valor_basico < PRIMEIRO_CORTE){
             return FRETE_MAIOR;
-        } else if (valor_basico <= SEGUNDO_CORTE) {
+        } else if (valor_basico < SEGUNDO_CORTE) {
             return FRETE_MENOR;
         }
         return ISENTO;
