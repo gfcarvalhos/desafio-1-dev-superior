@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ShippingService {
-    private Double valor_basico;
     final Double PRIMEIRO_CORTE = 100.0;
     final Double SEGUNDO_CORTE = 200.0;
     final Double FRETE_MAIOR = 20.0;
