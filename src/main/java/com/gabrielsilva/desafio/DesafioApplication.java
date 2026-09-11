@@ -1,7 +1,7 @@
 package com.gabrielsilva.desafio;
 
-import com.gabrielsilva.desafio.entities.Pedido;
-import com.gabrielsilva.desafio.services.PedidoService;
+import com.gabrielsilva.desafio.entities.Order;
+import com.gabrielsilva.desafio.services.OrderService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,10 +9,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DesafioApplication implements CommandLineRunner {
 
-    private PedidoService pedidoService;
+    private OrderService orderService;
 
-    public DesafioApplication(PedidoService pedidoService) {
-        this.pedidoService = pedidoService;
+    public DesafioApplication(OrderService orderService) {
+        this.orderService = orderService;
     }
 
     public static void main(String[] args) {
@@ -22,11 +22,11 @@ public class DesafioApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Pedido pedidoUm = new Pedido(1034, 150.00, 20.0);
-        System.out.println(pedidoService.pedidoFinal(pedidoUm));
-        Pedido pedidoDois = new Pedido(2282, 800.00, 10.0);
-        System.out.println(pedidoService.pedidoFinal(pedidoDois));
-        Pedido pedidoTres = new Pedido(1309, 95.90, 0.0);
-        System.out.println(pedidoService.pedidoFinal(pedidoTres));
+        Order orderUm = new Order(1034, 150.00, 20.0);
+        System.out.println(orderService.ToString(orderUm));
+        Order orderDois = new Order(2282, 800.00, 10.0);
+        System.out.println(orderService.ToString(orderDois));
+        Order orderTres = new Order(1309, 95.90, 0.0);
+        System.out.println(orderService.ToString(orderTres));
     }
 }

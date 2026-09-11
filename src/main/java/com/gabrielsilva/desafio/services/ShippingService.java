@@ -1,9 +1,10 @@
 package com.gabrielsilva.desafio.services;
 
+import com.gabrielsilva.desafio.entities.Order;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FreteService {
+public class ShippingService {
     private Double valor_basico;
     final Double PRIMEIRO_CORTE = 100.0;
     final Double SEGUNDO_CORTE = 200.0;
@@ -11,7 +12,8 @@ public class FreteService {
     final Double FRETE_MENOR = 12.0;
     final Double ISENTO = 0.0;
 
-    public Double valorDeFrete (Double valor_basico){
+    public Double shipment (Order order){
+        Double valor_basico = order.getBasic();
         if(valor_basico < PRIMEIRO_CORTE){
             return FRETE_MAIOR;
         } else if (valor_basico <= SEGUNDO_CORTE) {
