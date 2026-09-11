@@ -24,5 +24,9 @@ public class DesafioApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         Pedido pedidoUm = new Pedido(1034, 150.00, 20.0);
         System.out.println(pedidoService.pedidoFinal(pedidoUm));
+        Pedido pedidoDois = new Pedido(2282, 800.00, 10.0);
+        System.out.println(pedidoService.pedidoFinal(pedidoDois));
+        Pedido pedidoTres = new Pedido(1309, 95.90, 0.0);
+        System.out.println(pedidoService.pedidoFinal(pedidoTres));
     }
 }
